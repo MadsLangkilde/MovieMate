@@ -1,3 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Movie Mate</string>
+    <string name="description_app_icon">App icon</string>
+    <string name="description_app_icon_text">App icon with text</string>
+    <string name="home">Home</string>
+    <string name="movielist">Favorites</string>
+    <string name="search">Search</string>
+    <string name="menu">Menu</string>
 </resources>

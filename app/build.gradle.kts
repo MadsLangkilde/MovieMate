@@ -1,46 +1,20 @@
 plugins {
-    alias(libs.plugins.android.application)
-    alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.moviemate.application)
 }
 
 android {
     namespace = "com.madslangkilde.moviemate"
-    compileSdk = 34
-
-    defaultConfig {
-        applicationId = "com.madslangkilde.moviemate"
-        minSdk = 24
-        targetSdk = 34
-        versionCode = 1
-        versionName = "1.0"
-
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-    }
-
-    buildTypes {
-        release {
-            isMinifyEnabled = false
-            proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
-            )
-        }
-    }
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
-    }
-    kotlinOptions {
-        jvmTarget = "1.8"
-    }
 }
 
 dependencies {
-
-    implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.appcompat)
-    implementation(libs.material)
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
+    implementation(project(":presentation:start"))
+    implementation(project(":presentation:movielist"))
+    implementation(project(":presentation:search"))
+    implementation(project(":presentation:edit_favorite_movie"))
+    implementation(project(":data:database_provider"))
+    implementation(project(":data:repository_base_server"))
+    implementation(project(":data:repository_movies"))
+    implementation(project(":data:repository_movielist"))
+    implementation(project(":domain:repository_movies"))
+    implementation(project(":domain:repository_movielist"))
 }

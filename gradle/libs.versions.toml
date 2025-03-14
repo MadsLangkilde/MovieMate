@@ -1,22 +1,91 @@
 [versions]
-agp = "8.7.0"
-kotlin = "1.9.24"
-coreKtx = "1.15.0"
+androidGradlePlugin = "8.3.1"
+androidxActivity = "1.9.0"
+androidxComposeBom = "2025.02.00"
+androidxComposeCompiler = "1.5.12"
+androidxLifecycle = "2.8.0"
+androidxNavigation = "2.8.0-beta01"
+appcompat = "1.7.0"
+coil = "2.7.0"
+converterGson = "2.9.0"
+coreKtx = "1.13.1"
+coreSplashscreen = "1.0.1"
+espressoCore = "3.6.1"
+espressoCoreVersion = "3.0.2"
+gradle = "8.1.2"
+gson = "2.8.9"
 junit = "4.13.2"
 junitVersion = "1.2.1"
-espressoCore = "3.6.1"
-appcompat = "1.7.0"
+koin = "4.0.2"
+koinAndroidxCompose = "4.0.2"
+kotlin = "1.9.23"
+kotlinxSerializationJson = "1.6.3"
+ksp = "1.9.23-1.0.20"
 material = "1.12.0"
+navigationCompose = "2.8.8"
+realm = "1.16.0"
+retrofit = "2.9.0"
+runner = "1.0.2"
+androidTools = "31.4.0"
+activityKtx = "1.8.0"
 
 [libraries]
-androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
-junit = { group = "junit", name = "junit", version.ref = "junit" }
-androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
-androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+androidx-activity-compose = { group = "androidx.activity", name = "activity-compose" }
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+androidx-compose-bom = { module = "androidx.compose:compose-bom", version.ref = "androidxComposeBom" }
+androidx-compose-foundation = { group = "androidx.compose.foundation", name = "foundation" }
+androidx-compose-foundation-layout = { group = "androidx.compose.foundation", name = "foundation-layout" }
+androidx-compose-material3 = { module = "androidx.compose.material3:material3" }
+androidx-compose-runtime = { group = "androidx.compose.runtime", name = "runtime" }
+androidx-compose-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
+androidx-compose-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
+androidx-compose-ui-util = { group = "androidx.compose.ui", name = "ui-util" }
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+androidx-core-splashscreen = { module = "androidx.core:core-splashscreen", version.ref = "coreSplashscreen" }
+androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+androidx-lifecycle-runtimeCompose = { group = "androidx.lifecycle", name = "lifecycle-runtime-compose", version.ref = "androidxLifecycle" }
+androidx-lifecycle-viewmodel-compose = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-compose", version.ref = "androidxLifecycle" }
+androidx-navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "navigationCompose" }
+coil-compose = { module = "io.coil-kt:coil-compose", version.ref = "coil" }
+espresso-core = { group = "com.android.support.test.espresso", name = "espresso-core", version.ref = "espressoCoreVersion" }
+gradle = { module = "com.android.tools.build:gradle", version.ref = "gradle" }
+insert-koin-koin-androidx-compose = { module = "io.insert-koin:koin-androidx-compose", version.ref = "koinAndroidxCompose" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+kotlinx-serialization-json = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "kotlinxSerializationJson" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+realm-base = { module = "io.realm.kotlin:library-base", version.ref = "realm" }
+retrofit-v290 = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
+converter-gson-v290 = { module = "com.squareup.retrofit2:converter-gson", version.ref = "converterGson" }
+gson-v289 = { module = "com.google.code.gson:gson", version.ref = "gson" }
+runner = { group = "com.android.support.test", name = "runner", version.ref = "runner" }
+android-gradlePlugin = { group = "com.android.tools.build", name = "gradle", version.ref = "androidGradlePlugin" }
+ksp-gradlePlugin = { group = "com.google.devtools.ksp", name = "com.google.devtools.ksp.gradle.plugin", version.ref = "ksp" }
+kotlin-gradlePlugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
+android-tools-common = { group = "com.android.tools", name = "common", version.ref = "androidTools" }
+androidx-activity-ktx = { group = "androidx.activity", name = "activity-ktx", version.ref = "activityKtx" }
+
+#koin
+koin-android = { module = "io.insert-koin:koin-android", version.ref = "koin" }
+koin-androidx-compose = { module = "io.insert-koin:koin-androidx-compose", version.ref = "koin" }
+koin-test = { module = "io.insert-koin:koin-test-junit4", version.ref = "koin" }
+koin-android-test = { module = "io.insert-koin:koin-android-test", version.ref = "koin" }
+
 
 [plugins]
-android-application = { id = "com.android.application", version.ref = "agp" }
+android-application = { id = "com.android.application", version.ref = "androidGradlePlugin" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+android-library = { id = "com.android.library", version.ref = "androidGradlePlugin" }
 
+moviemate-application = { id = "moviemate.android.app", version = "unspecified" }
+moviemate-presentation = { id = "moviemate.android.presentation", version = "unspecified" }
+moviemate-domain = { id = "moviemate.android.domain", version = "unspecified" }
+moviemate-data-server-repository = { id = "moviemate.android.data.server.repository", version = "unspecified" }
+moviemate-library = { id = "moviemate.android.library", version = "unspecified" }
+moviemate-library-uibase = { id = "moviemate.android.library.uibase", version = "unspecified" }
+
+[bundles]
+application = ["androidx-core-splashscreen"]
+presentation = ["androidx-core-ktx", "androidx-activity-ktx", "androidx-activity-compose", "androidx-appcompat", "material", "androidx-lifecycle-viewmodel-compose", "androidx-navigation-compose", "androidx-compose-material3", "koin-androidx-compose", "koin-test", "junit", "androidx-junit", "androidx-espresso-core", "coil-compose"]
+serverrepository = ["retrofit-v290", "converter-gson-v290", "gson-v289"]
+di = ["koin-android", "koin-androidx-compose", "koin-test", "koin-android-test"]
